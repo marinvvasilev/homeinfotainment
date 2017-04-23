@@ -1,0 +1,69 @@
+@import './variables.scss';
+
+header#header{
+    background: white;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid $border-color;
+    font-size: $font-size + 2;
+    color: rgba(0,0,0, 0.65);
+
+    div.brand{
+        height: 60px;
+        span{
+            position: relative;
+            top: -8px;
+            display: inline-block;
+            color: $color-bold;
+        }
+        i{
+            color: $primary;
+            font-size: 31px;
+            line-height: 60px;
+            margin-right: 15px;
+        }
+        img{
+            max-height: 45px;
+            line-height: 60px;
+            margin-right: 15px;
+        }
+    }
+
+    ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        > li{
+            position: relative;
+            width: 22.5%;
+            list-style: none;
+            text-align: center;
+            float: left;
+            color: $color-link;
+
+            // &:after{
+            //     content: '';
+            //     transition: all .3s;
+            //     position: absolute;
+            //     bottom: -2px;
+            //     height: 2px;
+            //     left: 50%;
+            //     width: 0;
+            //     background: $primary;
+            //     color: $color-link;
+            // }
+
+            &.active{
+                color: $primary;
+                font-weight: bold;
+                // &:after{
+                //     left: 0;
+                //     width: 100%;
+                //     color: $primary-accent;
+                // }
+            }//active class
+        }
+    }
+
+}

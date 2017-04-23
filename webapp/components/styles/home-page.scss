@@ -1,0 +1,271 @@
+@import './variables.scss';
+
+#newsBlock{
+    position: relative;
+    height: 20%;
+    border-bottom: 1px solid $border-color;
+    color: $color;
+
+    .clock{
+        position: relative;
+        height: 100%;
+        border-right: 1px solid $warning;
+
+        .wrapper{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            margin-top: -37px;
+            text-align: center;
+
+            span.time{
+                position: relative;
+                display: block;
+                font-size: 32px;
+                text-align: center;
+                color: $color-link;
+                
+                strong{ color: $color-bold; }
+            }
+            span.date{
+                display: block;
+                text-align: center;
+                font-size: $font-md-size;
+                color: $color-link;
+            }
+        }
+    }
+
+    .weather{
+        position: relative;
+        height: 100%;
+
+        .forecast{
+            position: relative;
+            height: 100%;
+            color: $color;
+            div.center{
+                position: relative;
+                top: 50%;
+                margin-top: -45px;
+            }
+            span.current-temp{
+                font-size: 40px;
+                font-weight: bold;
+                color: $color-bold;
+            }
+            i{
+                font-size: 65px;
+                margin: 5px 5px 0 30px;
+                color: $primary-accent;
+            }
+            ul{
+                display: inline-block;
+
+                li{
+                    list-style: none;
+                    font-size: $font-size;
+                    span.min{ color: $secondary;}
+                    span.city{ color: $color-link;}
+                }
+
+            }
+        }
+        .week{
+
+            ul.item{
+                position: relative;
+                padding: 0;
+                display: inline-block;
+                width:14.285714285714286%;
+                height: 100%;
+                border-right: 1px solid $border-color-bold;
+                margin: 0;
+
+                &:first-child{
+                    border-left: 1px solid $warning;
+                }
+
+                li{
+                    position: relative;
+                    list-style: none;
+                    text-align: center;
+                    height: 25%;
+                    line-height: 49.25px;
+
+                    &:last-child{ border-right: none;}
+
+                    &:first-child{
+                        height: 50%;
+                        background: $border-color-light;
+                        border-bottom: 1px solid $border-color;
+                    }
+
+                    i{
+                        margin-top: 30px;
+                        font-size: 35px;
+                        color: $secondary;
+                    }
+                    span.min{
+                        color: $secondary-accent;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+section#daily{
+    position: relative;
+    height: 73%;
+
+    .newsItems{
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 45%;
+        border-right: 1px solid $border-color-bold;
+        overflow: hidden;
+    }
+
+    .calendarItems{
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-right: 1px solid $border-color-bold;
+        overflow: hidden;
+
+        &:last-child{
+            border-right: 0;
+        }
+    }
+    .list-item{
+        .widgetTitle{
+            text-align: center;
+            margin-top: 15px;
+
+            span{
+                position: relative;
+                display: inline-block;
+                width: 160px;
+                padding: 10px;
+                color: $primary;
+                font-size: $font-size + 2;
+            }
+
+        }
+
+        ul{
+            position: relative;
+            padding: 0;
+
+            li{
+                position: relative;
+                padding: 10px 0 10px 0;
+                list-style: none;
+                border-bottom: 1px solid $border-color;
+
+                &:after{
+                    content: '';
+                    position: relative;
+                    display: block;
+                    clear: both;
+                }
+                
+                span.icon{
+                    position: relative;
+                    display: inline-block;
+                    float: left;
+                    width: 65px;
+                    text-align: center;
+
+                    i{
+                        font-size: 35px;
+                        color: $secondary-accent;
+                    }
+                    img{
+                        width: 45px;
+                    }
+                }
+                p.wrap{
+                    display: inline-block;
+                    width: 80%;
+                    float: left;                    
+
+                    span.title{
+                        display: block;
+                        font-size: $font-size + 6;
+                        color: $color-bold;
+                    }
+
+                    span.lead{
+                        font-size: $font-size + 4;
+                        color: $color-link;
+                    }
+
+                }
+
+
+            }
+        }
+
+    }
+
+    .grid-item{
+        .widgetTitle{
+            text-align: center;
+            margin-top: 15px;
+
+            span{
+                position: relative;
+                display: inline-block;
+                width: 160px;
+                padding: 10px;
+                color: $primary;
+                font-size: $font-size + 2;
+            }
+
+        }
+
+        div.int{
+            position: relative;
+            height: 45%;
+            overflow: hidden;
+
+            &:after{
+                content: '';
+                position: relative;
+                display: block;
+                clear: both;
+            }
+
+            .icon{
+                    // position: relative;
+                    // display: block;
+                    // text-align: center;
+                    // padding-bottom: 15px;
+                    // border-bottom: 1px solid #f1f1f1;
+                    // margin-bottom: 15px;
+
+                    i{
+                        font-size: 35px;
+                        color: $primary;
+                    }
+                    img{
+                        width: 45px;
+                    }
+                }
+                .wrap{
+                    span.title{
+                        display: block;
+                        text-align: center;
+                        font-size: $font-size + 6;
+                        color: $color-bold;
+                    }
+                }
+        }
+
+    }
+}
