@@ -1,7 +1,8 @@
 const ImapClass = require('imap');
-const config = require('./conf/default');
+let config;
 
-const IMAP = module.exports = function (next) {
+const IMAP = module.exports = function (_config, next) {
+    config = _config; 
     this.imap = new ImapClass(config.imap);
 }
 
@@ -48,6 +49,7 @@ IMAP.prototype.getInbox = function (callback) {
 
 /**
  * Get Calander items
+ * @todo Not working with Outlook
  */
 IMAP.prototype.getCalendarEvents = function (callback) {
     if (!this.canContinue) {

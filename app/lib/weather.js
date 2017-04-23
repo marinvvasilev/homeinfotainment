@@ -1,8 +1,8 @@
 const request = require('request');
-const config = require('./conf/default.js');
+let config;
 
-var WeatherApp = module.exports = function WeatherApp() {
-
+var WeatherApp = module.exports = function WeatherApp(_config) {
+    config = _config;    
 };
 
 WeatherApp.prototype.forecast = function (callback) {
